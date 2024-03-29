@@ -61,7 +61,9 @@ Multiple ethernet interface FPGA cards are available, with many expansion cards
 Website: http://mesanet.com/    Store: http://store.mesanet.com/
 
 ### Remora Ethernet
-Realtime requirements are offloaded onto a controller board. Multiple differnet controller boards are supported - see Remora docs
+Realtime requirements are offloaded onto a controller board. Multiple differnet controller boards are supported - see Remora docs.
+
+These controller boards are designed / sold for use with Mach3. Use with LinuxCNC requires flashing new firmware, which has been developed by the LinuxCNC community. The manufacturer does not support LinuxCNC.
 
 Remora docs: https://remora-docs.readthedocs.io
 
@@ -109,6 +111,7 @@ EtherCAT is the open real-time Ethernet network originally developed by Beckhoff
 The EtherCat master (LinuxCNC computer) uses a standard ethernet (network) interface - no special hardware is needed on the master. The slaves use special hardware.
 There are many EtherCat slave devices available including servo drives, stepper drives, input, output interfaces, VFDs, and others.
 
+https://github.com/linuxcnc-ethercat/linuxcnc-ethercat
 
 ## PCI / PCIe
 ### Mesa
