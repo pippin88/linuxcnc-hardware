@@ -10,7 +10,7 @@ The most common is to use a x86 computer (standard Intel / AMD computer)
 ARM computers such as the Raspberry Pi or Orange Pi can be used
 
 # Hardware Interface to CNC machine
-There are multiple different ways to interface between LinuxCNC controller software, and CNC hardware (such as stepper / servo drivers, limits switches, inputs and outputs etc.)
+There are multiple different ways to interface between LinuxCNC controller software, and CNC hardware (such as stepper / servo drivers, limit switches, inputs and outputs etc.)
 
 Interfaces include:
 - Parallel Port
