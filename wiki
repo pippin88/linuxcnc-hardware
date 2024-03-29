@@ -40,7 +40,7 @@ Disadvantages:
 * Some PCI / PCIe parallel port cards do not work well or do not properly support the required EPP mode
 
 
-== Parallel Port FPGA Communication ==
+== Parallel Port to FPGA / MCU Communication ==
 Realtime (time critical) tasks such as step generation are done in hardware (not on the computer)
 
 === Mesa via Parallel Port ===
@@ -53,14 +53,14 @@ Realtime (time critical) tasks such as step generation are done in hardware (not
 
 
 == Ethernet ==
-=== Mesa Ethernet ===
+=== Mesa (Ethernet) ===
 :Mesa cards with a Field-programmable gate array (FPGA), interfaced to <nowiki>LinuxCNC</nowiki> computer via Ethernet. Time critical (realtime) tasks are performed on the FPGA card.
 
 :Multiple ethernet interface FPGA cards are available, with many expansion cards
 
 :Website: http://mesanet.com/    Store: http://store.mesanet.com/
 
-=== Remora Ethernet ===
+=== Remora (Ethernet) ===
 :Realtime requirements are offloaded onto a controller board. Multiple different controller boards are supported - see Remora docs.
 
 :Note that some of these controller boards (e.g. NVEM, EC300, EC500) are designed / sold for use with Mach3. Use with <nowiki>LinuxCNC</nowiki> requires flashing new firmware, which has been developed by the <nowiki>LinuxCNC</nowiki> community. The manufacturer does not support <nowiki>LinuxCNC</nowiki>.
@@ -90,7 +90,7 @@ RP2040 based controller boards
     Expatria Technologies PicoBOB-DLX - Raspberry Pi RP2040 based board with on-board W5500 Ethernet SPI adapter designed for Remora
 </nowiki>
 
-=== Litex-CNC ===
+=== Litex-CNC (Ethernet) ===
 :This project aims to make a generic CNC firmware and driver for FPGA cards which are supported by LiteX. Configuration of the board and driver is done using json-files. The supported boards are the Colorlight boards 5A-75B and 5A-75E, as these are fully supported with the open source toolchain.
 
 :Colorlight 5A-75B and 5A-75E cards are designed as a LED receiver card - it outputs to LED matrix panels. These cards have outputs only - hardware modification is required to enable use for inputs. Soldering required. Output buffers can be replaced with an input buffer.
@@ -98,7 +98,7 @@ RP2040 based controller boards
 :https://litex-cnc.readthedocs.io
 
 
-=== <nowiki>LinuxCNC</nowiki>-RIO ===
+=== <nowiki>LinuxCNC</nowiki>-RIO (Ethernet) ===
 :<nowiki>RealtimeIO</nowiki> for <nowiki>LinuxCNC</nowiki> based on an FPGA
 
 :Ethernet interface can be used with a Ethernet to SPI interface.
@@ -127,15 +127,15 @@ RP2040 based controller boards
 SPI = Serial Peripheral Interface. SPI interfaces can be found on single board computers like Raspberry Pi, or Orange Pi. SPI interface is _not_ generally present on standard computers (AMD/Intel).
 
 
-=== Remora SPI ===
+=== Remora (SPI) ===
 :Realtime requirements are offloaded onto a controller board. https://remora-docs.readthedocs.io
 
-=== <nowiki>LinuxCNC</nowiki>-RIO ===
+=== <nowiki>LinuxCNC</nowiki>-RIO (SPI) ===
 :<nowiki>RealtimeIO</nowiki> for <nowiki>LinuxCNC</nowiki> based on an FPGA
 
 :https://github.com/multigcs/LinuxCNC-RIO
 
-=== Mesa ===
+=== Mesa (SPI) ===
 :Mesa cards with a Field-programmable gate array (FPGA), interfaced to <nowiki>LinuxCNC</nowiki> computer via SPI. Time critical (realtime) tasks are performed on the FPGA card.
 
 :Example: 7C80 for Raspberry Pi
