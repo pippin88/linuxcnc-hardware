@@ -53,7 +53,7 @@ http://pico-systems.com/univstep.html
 
 ## Ethernet
 ### Mesa Ethernet
-Mesa use Field-programmable gate array (FPGA) 
+Mesa cards with a Field-programmable gate array (FPGA), interfaced to LinuxCNC computer via Ethernet. Time critical (realtime) tasks are performed on the FPGA card.
 
 Multiple ethernet interface FPGA cards are available, with many expansion cards
 
@@ -111,12 +111,11 @@ There are many EtherCat slave devices available including servo drives, stepper 
 
 ## PCI / PCIe
 ### Mesa
-Mesa produce Field-programmable gate array (FPGA) PCI / PCIe cards
+Mesa PCI / PCIe cards with a Field-programmable gate array (FPGA). Time critical (realtime) tasks are performed on the FPGA card.
 
 Multiple daughter / expansion cards are available
 
 Website: http://mesanet.com/    Store: http://store.mesanet.com/
-
 
 ## SPI
 ### Remora SPI
@@ -126,6 +125,14 @@ Realtime requirements are offloaded onto a controller board. https://remora-docs
 RealtimeIO for LinuxCNC based on an FPGA
 
 https://github.com/multigcs/LinuxCNC-RIO
+
+### Mesa
+Mesa cards with a Field-programmable gate array (FPGA), interfaced to LinuxCNC computer via SPI. Time critical (realtime) tasks are performed on the FPGA card.
+
+Example: 7C80 for Raspberry Pi
+
+Website: http://mesanet.com/    Store: http://store.mesanet.com/
+
 
 ## USB
 USB devices cannot be used to control motors or perform other __"real time"__ tasks.
