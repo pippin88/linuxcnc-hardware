@@ -12,15 +12,11 @@ The
 There are multiple different ways to interface between LinuxCNC controller software, and CNC hardware (such as stepper / servo drivers, limits switches, inputs and outputs etc.)
 
 Interfaces include:
-Parallel Port
-
-Ethernet
-
-Ethercat
-
-PCI / PCIe
-
-SPI (where the computer has a native SPI interface, such as Raspberry Pi)
+- Parallel Port
+- Ethernet
+- Ethercat
+- PCI / PCIe
+- SPI (where the computer has a native SPI interface, such as Raspberry Pi)
 
 
 ## Parallel Port
@@ -41,6 +37,10 @@ Some PCI/PCIe parallel port cards do not work well or do not properly support th
 
 ## Ethernet
 ### Mesa Ethernet
+Mesa use Field-programmable gate array (FPGA) 
+Website: http://mesanet.com/
+Store: http://store.mesanet.com/
+
 
 
 
