@@ -18,7 +18,7 @@ Interfaces include:
 - Ethercat
 - PCI / PCIe
 - SPI (where the computer has a native SPI interface, such as Raspberry Pi)
-- USB (__not__ realtime interface)
+- USB (_not_ realtime interface)
 
 A mix of different interfaces can be used. For example, a combination of ethercat for servo drives, and parallel port for additional General Purpose Inputs / Outputs (GPIO)
 
@@ -119,7 +119,7 @@ Multiple daughter / expansion cards are available
 Website: http://mesanet.com/    Store: http://store.mesanet.com/
 
 ## SPI
-SPI = Serial Peripheral Interface. SPI interfaces can be found on single board computers like Raspberry Pi, or Orange Pi. SPI interface is __not__ generally present on standard computers (AMD/Intel).
+SPI = Serial Peripheral Interface. SPI interfaces can be found on single board computers like Raspberry Pi, or Orange Pi. SPI interface is _not_ generally present on standard computers (AMD/Intel).
 
 
 ### Remora SPI
