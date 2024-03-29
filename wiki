@@ -1,50 +1,50 @@
-= Linuxcnc Hardware =
+= <nowiki>LinuxCNC</nowiki> Hardware =
 
-= Hardware to run the LinuxCNC software =
-A computer is required to run LinuxCNC itself.
+= Hardware to run the <nowiki>LinuxCNC</nowiki> software =
+A computer is required to run <nowiki>LinuxCNC</nowiki> itself.
 
-Minimum computer requirements can be found in the LinuxCNC docs: http://linuxcnc.org/docs/stable/html/getting-started/system-requirements.html
+Minimum computer requirements can be found in the <nowiki>LinuxCNC</nowiki> docs: http://LinuxCNC.org/docs/stable/html/getting-started/system-requirements.html
 
 The most common is to use a x86 computer (standard Intel / AMD computer)
 
 ARM computers such as the Raspberry Pi or Orange Pi can be used
 
 = Hardware Interface to CNC machine =
-There are multiple different ways to interface between LinuxCNC controller software, and CNC hardware (such as stepper / servo drivers, limit switches, inputs and outputs etc.)
+There are multiple different ways to interface between <nowiki>LinuxCNC</nowiki> controller software, and CNC hardware (such as stepper / servo drivers, limit switches, inputs and outputs etc.)
 
 Interfaces include:
 * Parallel Port
 * Ethernet
-* Ethercat
+* <nowiki>EtherCat</nowiki>
 * PCI / PCIe
 * SPI (where the computer has a native SPI interface, such as Raspberry Pi)
 * USB ('''''not''''' realtime interface)
 
-A mix of different interfaces can be used. For example, a combination of ethercat for servo drives, and parallel port for additional General Purpose Inputs / Outputs (GPIO)
+A mix of different interfaces can be used. For example, a combination of <nowiki>EtherCat</nowiki> for servo drives, and parallel port for additional General Purpose Inputs / Outputs (GPIO)
 
 Some of these solutions are usable for all aspects of hardware interfacing, and some have specific roles (e.g. non-realtime GPIO, for an operator inferface).
 
 == Parallel Port ==
-Using onboard motherboard parallel port, or a PCI/PCIe parallel port card.
+Using onboard motherboard parallel port, or a PCI / PCIe parallel port card.
 
 == Parallel Port Software Interface ==
-Realtime (time critical) tasks such as step generation are done in software on the LinuxCNC host - this means the parallel port interface is much more sensitive to the LinuxCNC computer's latency.
+Realtime (time critical) tasks such as step generation are done in software on the <nowiki>LinuxCNC</nowiki> host - this means the parallel port interface is much more sensitive to the <nowiki>LinuxCNC</nowiki> computer's latency.
 
 Advantages:
 * Low cost
 * Simple configuration
 
 Disadvantages:
-* Sensitive to the LinuxCNC computer's latency
-* Limited inputs/outputs 
-* Some PCI/PCIe parallel port cards do not work well or do not properly support the required EPP mode
+* Sensitive to the <nowiki>LinuxCNC</nowiki> computer's latency
+* Limited inputs / outputs 
+* Some PCI / PCIe parallel port cards do not work well or do not properly support the required EPP mode
 
 
 == Parallel Port FPGA Communication ==
 Realtime (time critical) tasks such as step generation are done in hardware (not on the computer)
 
 === Mesa via Parallel Port ===
-:Mesa use Field-programmable gate array (FPGA) interfaced via parallel port - e.g. 7i43
+:Mesa have Field-programmable gate array (FPGA) cards interfaced via parallel port - e.g. 7i43
 
 :Website: http://mesanet.com/    Store: http://store.mesanet.com/
 
@@ -54,18 +54,18 @@ Realtime (time critical) tasks such as step generation are done in hardware (not
 
 == Ethernet ==
 === Mesa Ethernet ===
-:Mesa cards with a Field-programmable gate array (FPGA), interfaced to LinuxCNC computer via Ethernet. Time critical (realtime) tasks are performed on the FPGA card.
+:Mesa cards with a Field-programmable gate array (FPGA), interfaced to <nowiki>LinuxCNC</nowiki> computer via Ethernet. Time critical (realtime) tasks are performed on the FPGA card.
 
 :Multiple ethernet interface FPGA cards are available, with many expansion cards
 
 :Website: http://mesanet.com/    Store: http://store.mesanet.com/
 
 === Remora Ethernet ===
-:Realtime requirements are offloaded onto a controller board. Multiple differnet controller boards are supported - see Remora docs.
+:Realtime requirements are offloaded onto a controller board. Multiple different controller boards are supported - see Remora docs.
 
-:Note that some of these controller boards (e.g. NVEM, EC300, EC500) are designed / sold for use with Mach3. Use with LinuxCNC requires flashing new firmware, which has been developed by the LinuxCNC community. The manufacturer does not support LinuxCNC.
+:Note that some of these controller boards (e.g. NVEM, EC300, EC500) are designed / sold for use with Mach3. Use with <nowiki>LinuxCNC</nowiki> requires flashing new firmware, which has been developed by the <nowiki>LinuxCNC</nowiki> community. The manufacturer does not support <nowiki>LinuxCNC</nowiki>.
 
-:Expatria Technologies PicoBOB-DLX was designed for LinuxCNC Remora.
+:Expatria Technologies <nowiki>PicoBOB-DLX</nowiki> was designed for <nowiki>LinuxCNC</nowiki> Remora.
 
 :Remora docs: https://remora-docs.readthedocs.io
 
@@ -98,22 +98,22 @@ RP2040 based controller boards
 :https://litex-cnc.readthedocs.io
 
 
-=== LinuxCNC-RIO ===
-:RealtimeIO for LinuxCNC based on an FPGA
+=== <nowiki>LinuxCNC</nowiki>-RIO ===
+:<nowiki>RealtimeIO</nowiki> for <nowiki>LinuxCNC</nowiki> based on an FPGA
 
 :Ethernet interface can be used with a Ethernet to SPI interface.
 
 :https://github.com/multigcs/LinuxCNC-RIO
 
 
-== Ethercat ===
-:Beckhoff EtherCAT(TM) and compatible systems can be made to work with LinuxCNC using the open source etherlab software.
+== <nowiki>EtherCat</nowiki> ===
+:Beckhoff <nowiki>EtherCat</nowiki>(TM) and compatible systems can be made to work with <nowiki>LinuxCNC</nowiki> using the open source etherlab software.
 
-:EtherCAT is the open real-time Ethernet network originally developed by Beckhoff.
-:The EtherCat master (LinuxCNC computer) uses a standard ethernet (network) interface - no special hardware is needed on the master. The slaves use special hardware.
-:There are many EtherCat slave devices available including servo drives, stepper drives, input, output interfaces, VFDs, and others.
+:<nowiki>EtherCat</nowiki> is the open real-time Ethernet network originally developed by Beckhoff.
+:The <nowiki>EtherCat</nowiki> master (<nowiki>LinuxCNC</nowiki> computer) uses a standard ethernet (network) interface - no special hardware is needed on the master. The slaves use special hardware.
+:There are many <nowiki>EtherCat</nowiki> slave devices available including servo drives, stepper drives, input, output interfaces, VFDs, and others.
 
-:https://github.com/linuxcnc-ethercat/linuxcnc-ethercat
+:https://github.com/LinuxCNC-EtherCat/LinuxCNC-EtherCat
 
 == PCI / PCIe ==
 === Mesa ===
@@ -130,13 +130,13 @@ SPI = Serial Peripheral Interface. SPI interfaces can be found on single board c
 === Remora SPI ===
 :Realtime requirements are offloaded onto a controller board. https://remora-docs.readthedocs.io
 
-=== LinuxCNC-RIO ===
-:RealtimeIO for LinuxCNC based on an FPGA
+=== <nowiki>LinuxCNC</nowiki>-RIO ===
+:<nowiki>RealtimeIO</nowiki> for <nowiki>LinuxCNC</nowiki> based on an FPGA
 
 :https://github.com/multigcs/LinuxCNC-RIO
 
 === Mesa ===
-:Mesa cards with a Field-programmable gate array (FPGA), interfaced to LinuxCNC computer via SPI. Time critical (realtime) tasks are performed on the FPGA card.
+:Mesa cards with a Field-programmable gate array (FPGA), interfaced to <nowiki>LinuxCNC</nowiki> computer via SPI. Time critical (realtime) tasks are performed on the FPGA card.
 
 :Example: 7C80 for Raspberry Pi
 
@@ -146,8 +146,8 @@ SPI = Serial Peripheral Interface. SPI interfaces can be found on single board c
 == USB ==
 USB devices cannot be used to control motors or perform other "real time" tasks.
 
-=== LinuxCNC_ArduinoConnector ===
-:This Project enables you to connect an Arduino to LinuxCNC and provides as many IO's as you could ever wish for. This Software is used as IO Expansion for LinuxCNC.
+=== <nowiki>LinuxCNC_ArduinoConnector</nowiki> ===
+:This Project enables you to connect an Arduino to <nowiki>LinuxCNC</nowiki> and provides as many IO's as you could ever wish for. This Software is used as IO Expansion for <nowiki>LinuxCNC</nowiki>.
 :It is NOT intended for timing and security relevant IO's. Don't use it for Emergency Stops or Endstop switches!
 
 :Site: https://github.com/AlexmagToast/LinuxCNC_ArduinoConnector
@@ -160,11 +160,11 @@ USB devices cannot be used to control motors or perform other "real time" tasks.
 = OLD INFO =
 
 == Supported Hardware ==
-The purpose of this page is to describe the electronics that interfaces your PC to your CNC machine.  For information on selecting a PC to run LinuxCNC, please see  [[Hardware Requirements]].
+The purpose of this page is to describe the electronics that interfaces your PC to your CNC machine.  For information on selecting a PC to run <nowiki>LinuxCNC</nowiki>, please see  [[Hardware Requirements]].
 Not a definitive list, by far.
-: [[HardwareDesign]]  - general notes on the hardware interface designs that work well with LinuxCNC
+: [[HardwareDesign]]  - general notes on the hardware interface designs that work well with <nowiki>LinuxCNC</nowiki>
 === Commercial PCI/ISA cards ===
-: General Mechatronics: http://www.generalmechatronics.com/en/linuxcnc
+: General Mechatronics: http://www.generalmechatronics.com/en/<nowiki>LinuxCNC</nowiki>
 ::DIN-rail mounted modular system
 :Servo-To-Go ISA: http://www.servotogo.com/ 
 :: $888 for 8 axis model II card (8 encoder inputs, 8 DAC outputs, 32 bit I/O, 8 analog inputs)
@@ -172,7 +172,7 @@ Not a definitive list, by far.
 :: 7541: $595 includes 8 DAC outputs, 8 analog Inputs, 4 encoder inputs, 32 digital inputs, 16 digital outputs
 :: 7544: $495 includes 8 DAC outputs, 4 encoder inputs, 32 digital inputs, 16 digital outputs
 :Mesa Electronics Anything I/O boards (plus all the Servo & Stepper Daughter Boards, etc) http://www.mesanet.com/
-:: The Anything I/O boards are all based on FPGAs, so they can be loaded with different firmware when LinuxCNC starts.<br>
+:: The Anything I/O boards are all based on FPGAs, so they can be loaded with different firmware when <nowiki>LinuxCNC</nowiki> starts.<br>
 :: Firmware defines the number of encoders, PWMs, stepgens and General Purpose IO.
 ::: 5i20, PCI, 200K gates, 72 I/O pins, $200
 ::: 5i22, PCI, 1.0M or 1.5M gates, 96 I/O pins, $370-$430
@@ -210,23 +210,23 @@ Not a definitive list, by far.
 :Using a NetMos parport card
 ::
 :Mesa Electronics 7i43: http://www.mesanet.com
-:: $80.  The 7i43 is an FPGA-based "Anything I/O" board.  It has a Spartan3 FPGA (200K or 400K gates) and 48 I/O pins.  LinuxCNC supports this board with the HostMot2 firmware, which is available in many different configurations providing encoders, PWM generators, step/dir generators, and general purpose digital I/O pins.
+:: $80.  The 7i43 is an FPGA-based "Anything I/O" board.  It has a Spartan3 FPGA (200K or 400K gates) and 48 I/O pins.  <nowiki>LinuxCNC</nowiki> supports this board with the HostMot2 firmware, which is available in many different configurations providing encoders, PWM generators, step/dir generators, and general purpose digital I/O pins.
 :: look here for more info: [[mesa cards]]
 
 === Ethernet based BUS Systems ===
-:  Beckhoff EtherCAT(TM) and compartible systems can be made to work with LinuxCNC using the open source etherlab software. see [[etherlab]] for details
+:  Beckhoff <nowiki>EtherCat</nowiki>(TM) and compartible systems can be made to work with <nowiki>LinuxCNC</nowiki> using the open source etherlab software. see [[etherlab]] for details
 
-:  AB&T [[EpoCAT FR1000]]: http://www.bausano.net/en/hardware/ethercat/epocat-fr-1000.html
-:: 5 axes slave module EtherCAT(TM) compatible. 
+:  AB&T [[EpoCAT FR1000]]: http://www.bausano.net/en/hardware/<nowiki>EtherCat</nowiki>/epocat-fr-1000.html
+:: 5 axes slave module <nowiki>EtherCat</nowiki>(TM) compatible. 
 :: $550 includes 5 1MHz step/dir outputs,1  auxiliary analog output, 2 analog inputs, 12 digital inputs, 8 digital outputs, 1 probe input.
 
 : Mesa Electronics 7i76E, 7i96, 7i92 and 7i80
 
 === CAN based BUS Systems ===
-:  currently there is no known driver for LinuxCNC to connect to CAN based bus systems
+:  currently there is no known driver for <nowiki>LinuxCNC</nowiki> to connect to CAN based bus systems
 
 === Step & Direction Drives ===
-'''Note:''' any Stepper-motor or servo-motor drive that accepts step/direction signals could be used with LinuxCNC. These are just some examples of inexpensive stepper/servo drives.
+'''Note:''' any Stepper-motor or servo-motor drive that accepts step/direction signals could be used with <nowiki>LinuxCNC</nowiki>. These are just some examples of inexpensive stepper/servo drives.
 :[http://hobbycnc.com HobbyCNC]
 ::$54 ([http://hobbycnc.com/product/hobbycnc-ez/ 3-axis EZ board] only) to $240 ([http://hobbycnc.com/product/hobbycnc-pro-combo-kits/ 4-axis PRO board], parallel cable & 4 motors).
 ::Step & direction signals on 25 pin D, selectable microstepping, 3A/phase.
@@ -239,7 +239,7 @@ Not a definitive list, by far.
  since (the early) days, using a radio shack breakout board to remap the signals. 
  Now particularly since hal now has mappable i/o pins, the pinout diffs 
  between the Xylotex boards and other driver boards is a total non-issue & 
- the rs232 breakout box isn't needed anymore. LinuxCNC even comes with a 
+ the rs232 breakout box isn't needed anymore. <nowiki>LinuxCNC</nowiki> even comes with a 
  halfile made for the xylotex boards.
 </blockquote></html>
 :[http://www.pmdx.com/PMDX-150/index.html PMDX-150]
@@ -275,7 +275,7 @@ https://github.com/rene-dev/stmbl
 ::[[Startech]] (Sunix/SUN1888)
 ::[[SIIG]]
 :PCIe EPP Cards
-::Dual port Vantec [https://forum.linuxcnc.org/38-general-linuxcnc-questions/46705-vantec-2-port-parallel-pcie-card-ugt-pce20pl UGT-PCE20PL]
+::Dual port Vantec [https://forum.<nowiki>LinuxCNC</nowiki>.org/38-general-<nowiki>LinuxCNC</nowiki>-questions/46705-vantec-2-port-parallel-pcie-card-ugt-pce20pl UGT-PCE20PL]
 ::Parallel port cards that use the ASIX [[MCS9901]]
 :PCI SPP Cards
 ::NetMos - Most parallel port cards use one of the NetMos chips
@@ -289,19 +289,19 @@ https://github.com/rene-dev/stmbl
 ::$41.60 C1G - Parallel Port Interface Card (For Geckos)
 :[http://www.pmdx.com/  PMDX]
 ::Breakout Boards and other accessories for step and direction controls
-:[http://www.ijohnsen.com/blog/linuxcnc-mach3-breakout-board/ LinuxCNC Breakout Board]
+:[http://www.ijohnsen.com/blog/<nowiki>LinuxCNC</nowiki>-mach3-breakout-board/ <nowiki>LinuxCNC</nowiki> Breakout Board]
 ::Parallel Port Breakout Board found on ebay and aliexpress for under $10
 
 === VFD's ===
-<html><img style="float:right" src="http://wiki.linuxcnc.org/uploads/gs2_100.jpg"></html>
+<html><img style="float:right" src="http://wiki.<nowiki>LinuxCNC</nowiki>.org/uploads/gs2_100.jpg"></html>
 :Variable Frequency Drives are generally used to drive three phase spindle motors. Variable-frequency drives are also known as adjustable-frequency drives (AFD), variable-speed drives (VSD), AC drives, microdrives or inverter drives. Since the voltage is varied along with frequency, these are sometimes also called VVVF (variable voltage variable frequency) drives. Since the spindle motor is often the only truly three phase component of a CNC machine, a VFD may be used to convert a machine to single phase by either using an overrated three phase input drive or a drive designed as a single phase input drive. Voltage conversion is also a common feature that can allow one to use, for instance, a 460 Volt motor from 240 Volt mains. See: http://en.wikipedia.org/wiki/Variable-frequency_drive
 
-:Common I/O are; the front panel,or digital inputs such as start, stop, forward, reverse, etcetera, along with analog speed as +/- 5 or 10 Volts, or Modbus RTU and Modbus Ethernet. For use with LinuxCNC, the digital, analog, and Modbus I/O are the most interesting.
+:Common I/O are; the front panel,or digital inputs such as start, stop, forward, reverse, etcetera, along with analog speed as +/- 5 or 10 Volts, or Modbus RTU and Modbus Ethernet. For use with <nowiki>LinuxCNC</nowiki>, the digital, analog, and Modbus I/O are the most interesting.
 
 :[[VFD Digital/Analog Interface]]
 :[[VFD Modbus]]
 === Encoder & Resolver Interfaces ===
-:Pico Systems has a line of products to connect proprietary position feedback devices to LinuxCNC systems and others CNC controls.
+:Pico Systems has a line of products to connect proprietary position feedback devices to <nowiki>LinuxCNC</nowiki> systems and others CNC controls.
 :[http://pico-systems.com/osc2.5/catalog/product_info.php?products_id=8 Fanuc Converter]
 ::The original Fanuc "Red Cap" motors had quadrature encoders, but the commutation information was proprietary.  They call these "Pulse Coders."  We have a converter that converts these signals to standard "Hall" signals that can be used with Pico Systems brushless drives or other makes.
 :[http://pico-systems.com/osc2.5/catalog/product_info.php?products_id=34 Fanuc Serial Converter]
@@ -314,26 +314,26 @@ https://github.com/rene-dev/stmbl
 === Human Interface ===
 :[[ModIO]]
 
-=== DIY hardware known to work with LinuxCNC ===
+=== DIY hardware known to work with <nowiki>LinuxCNC</nowiki> ===
 
 :[http://www.piclist.com/techref/io/stepper/linistep/index.htm LiniStepper]
-::The open-source [http://www.piclist.com/techref/io/stepper/linistep/index.htm LiniStepper motor driver] is known to work with LinuxCNC: [http://www.youtube.com/watch?v=8S0URMiZyXo video of a Linisteppers driving a Sherline 2000], [http://www.piclist.com/techref/io/stepper/linistep/EMC.htm configuration settings] It is Microchip PIC based and supports full, half (at full power), as well as 6th and 18th microstepping with linear smoothing, for small to medium sized Unipolar motors. The [http://www.piclist.com/techref/io/stepper/linistep/lini_asm.txt source], [http://www.piclist.com/images/member/RB-ezy-Q33/LiniV2_sch.gif circuit], and several [http://www.piclist.com/techref/io/stepper/linistep/mods.htm#layouts user contributed board layouts] are available as well as [http://www.piclist.com/techref/io/stepper/linistep/index.htm#kits full kits] with pre-programmed PIC chips. It uses [http://pminmo.com/misc/interface.htm PMinMO connector] so you can mix and match with the drivers and BOB's from [http://pminmo.com PMinMO] including those listed below.
+::The open-source [http://www.piclist.com/techref/io/stepper/linistep/index.htm LiniStepper motor driver] is known to work with <nowiki>LinuxCNC</nowiki>: [http://www.youtube.com/watch?v=8S0URMiZyXo video of a Linisteppers driving a Sherline 2000], [http://www.piclist.com/techref/io/stepper/linistep/EMC.htm configuration settings] It is Microchip PIC based and supports full, half (at full power), as well as 6th and 18th microstepping with linear smoothing, for small to medium sized Unipolar motors. The [http://www.piclist.com/techref/io/stepper/linistep/lini_asm.txt source], [http://www.piclist.com/images/member/RB-ezy-Q33/LiniV2_sch.gif circuit], and several [http://www.piclist.com/techref/io/stepper/linistep/mods.htm#layouts user contributed board layouts] are available as well as [http://www.piclist.com/techref/io/stepper/linistep/index.htm#kits full kits] with pre-programmed PIC chips. It uses [http://pminmo.com/misc/interface.htm PMinMO connector] so you can mix and match with the drivers and BOB's from [http://pminmo.com PMinMO] including those listed below.
 :L297/L298 stepper driver
 ::A single-sided board based on the L297/L298 chipset.  up to 46V supply, 2A/motor, constant-current chopper.  For bipolar motors.  Half- or full-stepping with step and direction inputs.  PDF format for DIY pcb.  Thru-hole components. [http://pminmo.com/PMinMOwiki/index.php5?title=L297-8  PMinMO.com L297-8]
 ::A three axis driver based on the L297/L298 chipset. Available as a kit (THT) or PCB only (double-sided board, industrial quality).  Up to 43V supply, 2A/motor, constant-current chopper.  For bipolar motors.  Half- or full-stepping with step and direction inputs.[http://www.mechapro.de/step3d-e.html  mechapro 3D-Step]
-:[http://linuxcnc.org/docs/2.1/html/hal/pluto_servo.html Pluto-P Servo]
-::An FPGA board with open-source firmware and LinuxCNC driver.  4x20kHz PWM, 4x8MHz quadrature, 10+ digital outputs, 8+ digital inputs.  Uses EPP parallel port.  Needs compatible servo amplifiers (up/down or pwm+direction input), such as L298 servo driver (below)
+:[http://<nowiki>LinuxCNC</nowiki>.org/docs/2.1/html/hal/pluto_servo.html Pluto-P Servo]
+::An FPGA board with open-source firmware and <nowiki>LinuxCNC</nowiki> driver.  4x20kHz PWM, 4x8MHz quadrature, 10+ digital outputs, 8+ digital inputs.  Uses EPP parallel port.  Needs compatible servo amplifiers (up/down or pwm+direction input), such as L298 servo driver (below)
 :L298 servo driver
 ::A single sided board based on the L298 H-bridge.  Up to 46V supply, 2A/motor.  For DC servo motors with TTL-level encoder outputs.  Driven by PWM input.  PNG images of schematic. So far this has only run cradek's lathe experimentally, but the results are good and with the new parallel port "x mode" (8 outputs, 9 inputs, supported on some but not all parallel ports) it may be possible to run a 3 or 4 axis machine with this scheme.  http://emergent.unpythonic.net/projects/01142347802
-::A diagram of the hal connections in the etch-servo hal example distributed with LinuxCNC is available upload:EtchHalDiagram.pdf .
+::A diagram of the hal connections in the etch-servo hal example distributed with <nowiki>LinuxCNC</nowiki> is available upload:EtchHalDiagram.pdf .
 :Medium Current Quadrature Drive Servo System
-::This is a full servo board up to 7amp +-24v. Its on board DSPic processor reads quadrature position signals from LinuxCNC stepgen type 2 and uses an onboard PID loop driving a current amplifier to keep the actual position close to the commanded position. Drive setup is through a serial port. It is best suited for 12 to 25 volt dc/servo motors with TTL encoders. Pic source code is GPL. PCB eagle project provided as well as milling and drilling G code files for machining the board with LinuxCNC. http://members.shaw.ca/swstuff/dspic-servo.html
+::This is a full servo board up to 7amp +-24v. Its on board DSPic processor reads quadrature position signals from <nowiki>LinuxCNC</nowiki> stepgen type 2 and uses an onboard PID loop driving a current amplifier to keep the actual position close to the commanded position. Drive setup is through a serial port. It is best suited for 12 to 25 volt dc/servo motors with TTL encoders. Pic source code is GPL. PCB eagle project provided as well as milling and drilling G code files for machining the board with <nowiki>LinuxCNC</nowiki>. http://members.shaw.ca/swstuff/dspic-servo.html
 :[[AVR]] (in very early development)
 ::Parallel port to AVR fast hardware signal generator and counter
 :[[ARM]]
-::Might be used for a parallel port interface similar to the AVR above, but faster. May also be fast enough to run Linux, RTAI and/or LinuxCNC by itself, such as on a Beagle Board.
+::Might be used for a parallel port interface similar to the AVR above, but faster. May also be fast enough to run Linux, RTAI and/or <nowiki>LinuxCNC</nowiki> by itself, such as on a Beagle Board.
 :[[FPGA]] (and CPLD)
-::May be the ultimate in LinuxCNC peripheral speed. Popular for PCI and parallel port I/O interface cards. This page explores this technology to see if it might be useful to the beginning developer, integrator or DIY'er.
+::May be the ultimate in <nowiki>LinuxCNC</nowiki> peripheral speed. Popular for PCI and parallel port I/O interface cards. This page explores this technology to see if it might be useful to the beginning developer, integrator or DIY'er.
 :[[Bridges - Half, Full, Three Phase]]
 ::Power drivers for switched and PWM control of motors or other high voltage or high current loads
 
@@ -342,10 +342,10 @@ https://github.com/rene-dev/stmbl
 ::A single-sided board based on the ULN2803 darlington chip.  Simple, but very low current, <500mA/motor.  Not recommended for anything but a toy.  Half- or full-stepping with 4 winding activation signals per axis.  PNG images of schematic and board. This design could be adapted to drive 3-axes, because there are 12 available outputs. http://axis.unpythonic.net/etchcnc
 
 :[[RC Servo Test]]
-::I can't think of any CNC application, but LinuxCNC's PWM and pyVCP can be used to test RC servos.
+::I can't think of any CNC application, but <nowiki>LinuxCNC</nowiki>'s PWM and pyVCP can be used to test RC servos.
 
 === other hardware we've heard about, but we don't know if it will work or not ==
-* [https://code.google.com/p/rt-8p8c/ rt-8p8c]: an ethernet based interface for LinuxCNC. Probably still under development.
+* [https://code.google.com/p/rt-8p8c/ rt-8p8c]: an ethernet based interface for <nowiki>LinuxCNC</nowiki>. Probably still under development.
 * [https://code.google.com/p/picnc/ picnc]: a Raspberry Pi PIC32 expansion board. Probably still under development.
 
 === Hardware that doesn't work ===
