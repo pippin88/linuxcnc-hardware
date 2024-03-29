@@ -6,7 +6,6 @@ A computer is required to run LinuxCNC itself
 The most common is to use a x86 computer (standard Intel / AMD computer)
 
 ARM computers such as the Raspberry Pi or Orange Pi can be used
-The 
 
 # Hardware Interface to CNC machine
 There are multiple different ways to interface between LinuxCNC controller software, and CNC hardware (such as stepper / servo drivers, limits switches, inputs and outputs etc.)
@@ -18,6 +17,9 @@ Interfaces include:
 - PCI / PCIe
 - SPI (where the computer has a native SPI interface, such as Raspberry Pi)
 
+A mix of different interfaces can be used. For example, a combination of ethercat for servo drives, and parallel port for additional General Purpose Inputs / Outputs (GPIO)
+
+Some of these solutions are usable for all aspects of hardware interfacing, and some have specific roles (e.g. non-realtime GPIO, for an operator inferface).
 
 ## Parallel Port
 Using onboard motherboard parallel port, or a PCI/PCIe parallel port card.
