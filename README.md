@@ -118,6 +118,9 @@ Multiple daughter / expansion cards are available
 Website: http://mesanet.com/    Store: http://store.mesanet.com/
 
 ## SPI
+SPI = Serial Peripheral Interface. SPI interfaces can be found on single board computers like Raspberry Pi, or Orange Pi. SPI interface is __not__ generally present on standard computers (AMD/Intel).
+
+
 ### Remora SPI
 Realtime requirements are offloaded onto a controller board. https://remora-docs.readthedocs.io
 
