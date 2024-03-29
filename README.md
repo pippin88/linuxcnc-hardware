@@ -1,7 +1,9 @@
 # Linuxcnc Hardware
 
 # Hardware to run the LinuxCNC software
-A computer is required to run LinuxCNC itself
+A computer is required to run LinuxCNC itself.
+
+Minimum computer requirements can be found in the LinuxCNC docs: http://linuxcnc.org/docs/stable/html/getting-started/system-requirements.html
 
 The most common is to use a x86 computer (standard Intel / AMD computer)
 
@@ -25,7 +27,7 @@ Some of these solutions are usable for all aspects of hardware interfacing, and 
 ## Parallel Port
 Using onboard motherboard parallel port, or a PCI/PCIe parallel port card.
 
-### Parallel Port Software Interface
+## Parallel Port Software Interface
 Step generation is done in software on the LinuxCNC host - this means the parallel port interface is much more sensitive to the LinuxCNC computer's latency.
 
 __Advantages:__
@@ -38,10 +40,15 @@ __Disadvantages:__
 - Some PCI/PCIe parallel port cards do not work well or do not properly support the required EPP mode
 
 
-### Parallel Port FPGA Communication
+## Parallel Port FPGA Communication
+
+### Mesa via Parallel Port
 Mesa use Field-programmable gate array (FPGA) interfaced via parallel port - e.g. 7i43
 
 Website: http://mesanet.com/    Store: http://store.mesanet.com/
+
+### Pico Systems via Parallel Port
+http://pico-systems.com/univstep.html
 
 
 ## Ethernet
