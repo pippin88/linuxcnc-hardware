@@ -18,7 +18,7 @@ Interfaces include:
 - Ethercat
 - PCI / PCIe
 - SPI (where the computer has a native SPI interface, such as Raspberry Pi)
-- USB (__not realtime interface__)
+- USB (__not__ realtime interface)
 
 A mix of different interfaces can be used. For example, a combination of ethercat for servo drives, and parallel port for additional General Purpose Inputs / Outputs (GPIO)
 
