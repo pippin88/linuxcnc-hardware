@@ -29,28 +29,26 @@ Step generation is done in software on the LinuxCNC host - this means the parall
 
 
 __Advantages:__
-Low cost
-Simple configuration
+- Low cost
+- Simple configuration
 
 __Disadvantages:__
-Sensitive to the LinuxCNC computer's latency
-Limited inputs/outputs 
-Some PCI/PCIe parallel port cards do not work well or do not properly support the required EPP mode
+- Sensitive to the LinuxCNC computer's latency
+- Limited inputs/outputs 
+- Some PCI/PCIe parallel port cards do not work well or do not properly support the required EPP mode
 
 
 ## Ethernet
 ### Mesa Ethernet
 Mesa use Field-programmable gate array (FPGA) 
-Website: http://mesanet.com/
-Store: http://store.mesanet.com/
 
-
-
+Website: http://mesanet.com/    Store: http://store.mesanet.com/
 
 ### Remora Ethernet
-Realtime requirements are offloaded onto the controller board
+Realtime requirements are offloaded onto a controller board. Multiple differnet controller boards are supported - see Remora docs
+
 Remora docs: https://remora-docs.readthedocs.io
-Multiple differnet controller boards are supported - see Remora docs
+
 As of March 2024:
 ```
 STM32 based controller boards
@@ -72,6 +70,13 @@ RP2040 based controller boards
     Expatria Technologies PicoBOB-DLX - Raspberry Pi RP2040 based board with on-board W5500 Ethernet SPI adapter designed for Remora
 ```
 
+### LinuxCNC-RIO
+RealtimeIO for LinuxCNC based on an FPGA
+
+Ethernet interface can be used with a Ethernet to SPI interface.
+
+https://github.com/multigcs/LinuxCNC-RIO
+
 
 ## Ethercat
 Beckhoff EtherCAT(TM) and compatible systems can be made to work with LinuxCNC using the open source etherlab software.
@@ -88,8 +93,12 @@ FPGA
 
 ## SPI
 ### Remora SPI
-Realtime requirements are offloaded onto the controller board
-https://remora-docs.readthedocs.io
+Realtime requirements are offloaded onto a controller board. https://remora-docs.readthedocs.io
+
+### LinuxCNC-RIO
+RealtimeIO for LinuxCNC based on an FPGA
+
+https://github.com/multigcs/LinuxCNC-RIO
 
 ## USB
 
