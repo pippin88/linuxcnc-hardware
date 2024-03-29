@@ -69,25 +69,25 @@ Realtime (time critical) tasks such as step generation are done in hardware (not
 
 :Remora docs: https://remora-docs.readthedocs.io
 
-As of March 2024:
+:As of March 2024:
  <nowiki>
-STM32 based controller boards
+    STM32 based controller boards
 
-    NVEM - an STM32F207 based board with Ethernet PHY chip, originally intended for Mach3. [No longer in production, Legacy Support - no new features]
+        NVEM - an STM32F207 based board with Ethernet PHY chip, originally intended for Mach3. [No longer in production, Legacy Support - no new features]
 
-    EC500 - an STM32F407 based board with Ethernet PHY chip, originally intended for Mach3. [No longer in production, Legacy Support - no new features]
+        EC500 - an STM32F407 based board with Ethernet PHY chip, originally intended for Mach3. [No longer in production, Legacy Support - no new features]
 
-    Expatria Technologies Flexi-HAL with uFlexiNET Ethernet adapter - an STM32F446 based board with W5500 Ethernet SPI adapter designed for Remora
+        Expatria Technologies Flexi-HAL with uFlexiNET Ethernet adapter - an STM32F446 based board with W5500 Ethernet SPI adapter designed for Remora
 
-iMX RT1052 based controller boards
+    iMX RT1052 based controller boards
 
-    NVEM, EC300 & EC500 - iMXRT1052 based controller boards with Ethernet PHY chip, originally intended for Mach3. [In active development]
+        NVEM, EC300 & EC500 - iMXRT1052 based controller boards with Ethernet PHY chip, originally intended for Mach3. [In active development]
 
-RP2040 based controller boards
+    RP2040 based controller boards
 
-    WIZnet W5500-EVB-Pico - Raspberry Pi RP2040 based development board with on-board W5500 Ethernet SPI adapter
+        WIZnet W5500-EVB-Pico - Raspberry Pi RP2040 based development board with on-board W5500 Ethernet SPI adapter
 
-    Expatria Technologies PicoBOB-DLX - Raspberry Pi RP2040 based board with on-board W5500 Ethernet SPI adapter designed for Remora
+        Expatria Technologies PicoBOB-DLX - Raspberry Pi RP2040 based board with on-board W5500 Ethernet SPI adapter designed for Remora
 </nowiki>
 
 === Litex-CNC (Ethernet) ===
@@ -124,7 +124,7 @@ RP2040 based controller boards
 :Website: http://mesanet.com/    Store: http://store.mesanet.com/
 
 == SPI ==
-SPI = Serial Peripheral Interface. SPI interfaces can be found on single board computers like Raspberry Pi, or Orange Pi. SPI interface is _not_ generally present on standard computers (AMD/Intel).
+SPI = Serial Peripheral Interface. SPI interfaces can be found on single board computers like Raspberry Pi, or Orange Pi. SPI interface is '''not''' generally present on standard computers (AMD/Intel).
 
 
 === Remora (SPI) ===
