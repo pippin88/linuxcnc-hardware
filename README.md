@@ -63,7 +63,9 @@ Website: http://mesanet.com/    Store: http://store.mesanet.com/
 ### Remora Ethernet
 Realtime requirements are offloaded onto a controller board. Multiple differnet controller boards are supported - see Remora docs.
 
-These controller boards are designed / sold for use with Mach3. Use with LinuxCNC requires flashing new firmware, which has been developed by the LinuxCNC community. The manufacturer does not support LinuxCNC.
+Note that some of these controller boards (e.g. NVEM, EC300, EC500) are designed / sold for use with Mach3. Use with LinuxCNC requires flashing new firmware, which has been developed by the LinuxCNC community. The manufacturer does not support LinuxCNC.
+
+Expatria Technologies PicoBOB-DLX was designed for LinuxCNC Remora.
 
 Remora docs: https://remora-docs.readthedocs.io
 
