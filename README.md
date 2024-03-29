@@ -25,8 +25,8 @@ Some of these solutions are usable for all aspects of hardware interfacing, and 
 ## Parallel Port
 Using onboard motherboard parallel port, or a PCI/PCIe parallel port card.
 
+### Parallel Port Software Interface
 Step generation is done in software on the LinuxCNC host - this means the parallel port interface is much more sensitive to the LinuxCNC computer's latency.
-
 
 __Advantages:__
 - Low cost
@@ -38,9 +38,17 @@ __Disadvantages:__
 - Some PCI/PCIe parallel port cards do not work well or do not properly support the required EPP mode
 
 
+### Parallel Port FPGA Communication
+Mesa use Field-programmable gate array (FPGA) interfaced via parallel port - e.g. 7i43
+
+Website: http://mesanet.com/    Store: http://store.mesanet.com/
+
+
 ## Ethernet
 ### Mesa Ethernet
 Mesa use Field-programmable gate array (FPGA) 
+
+Multiple ethernet interface FPGA cards are available, with many expansion cards
 
 Website: http://mesanet.com/    Store: http://store.mesanet.com/
 
@@ -88,7 +96,11 @@ There are many EtherCat slave devices available including servo drives, stepper 
 
 ## PCI / PCIe
 ### Mesa
-FPGA 
+Mesa produce Field-programmable gate array (FPGA) PCI / PCIe cards
+
+Multiple daughter / expansion cards are available
+
+Website: http://mesanet.com/    Store: http://store.mesanet.com/
 
 
 ## SPI
