@@ -28,7 +28,7 @@ Some of these solutions are usable for all aspects of hardware interfacing, and 
 Using onboard motherboard parallel port, or a PCI/PCIe parallel port card.
 
 ## Parallel Port Software Interface
-Step generation is done in software on the LinuxCNC host - this means the parallel port interface is much more sensitive to the LinuxCNC computer's latency.
+Realtime (time critical) tasks such as step generation are done in software on the LinuxCNC host - this means the parallel port interface is much more sensitive to the LinuxCNC computer's latency.
 
 __Advantages:__
 - Low cost
@@ -41,6 +41,7 @@ __Disadvantages:__
 
 
 ## Parallel Port FPGA Communication
+Realtime (time critical) tasks such as step generation are done in hardware (not on the computer)
 
 ### Mesa via Parallel Port
 Mesa use Field-programmable gate array (FPGA) interfaced via parallel port - e.g. 7i43
