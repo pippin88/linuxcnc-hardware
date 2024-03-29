@@ -13,9 +13,13 @@ There are multiple different ways to interface between LinuxCNC controller softw
 
 Interfaces include:
 Parallel Port
+
 Ethernet
+
 Ethercat
+
 PCI / PCIe
+
 SPI (where the computer has a native SPI interface, such as Raspberry Pi)
 
 
