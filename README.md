@@ -25,7 +25,14 @@ Using onboard motherboard parallel port, or a PCI/PCIe parallel port card.
 Step generation is done in software on the LinuxCNC host - this means the parallel port interface is much more sensitive to the LinuxCNC computer's latency.
 
 
+__Advantages:__
+Low cost
+Simple configuration
 
+__Disadvantages:__
+Sensitive to the LinuxCNC computer's latency
+Limited inputs/outputs 
+Some PCI/PCIe parallel port cards do not work well or do not properly support the required EPP mode
 
 
 ## Ethernet
