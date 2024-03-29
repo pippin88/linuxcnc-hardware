@@ -16,6 +16,7 @@ Interfaces include:
 - Ethercat
 - PCI / PCIe
 - SPI (where the computer has a native SPI interface, such as Raspberry Pi)
+- USB (__not realtime interface__)
 
 A mix of different interfaces can be used. For example, a combination of ethercat for servo drives, and parallel port for additional General Purpose Inputs / Outputs (GPIO)
 
@@ -89,5 +90,14 @@ FPGA
 ### Remora SPI
 Realtime requirements are offloaded onto the controller board
 https://remora-docs.readthedocs.io
+
+## USB
+
+LinuxCNC_ArduinoConnector
+
+This Project enables you to connect an Arduino to LinuxCNC and provides as many IO's as you could ever wish for. This Software is used as IO Expansion for LinuxCNC.
+It is NOT intended for timing and security relevant IO's. Don't use it for Emergency Stops or Endstop switches!
+
+Site: https://github.com/AlexmagToast/LinuxCNC_ArduinoConnector
 
 
