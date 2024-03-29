@@ -78,6 +78,14 @@ RP2040 based controller boards
     Expatria Technologies PicoBOB-DLX - Raspberry Pi RP2040 based board with on-board W5500 Ethernet SPI adapter designed for Remora
 ```
 
+### Litex-CNC
+This project aims to make a generic CNC firmware and driver for FPGA cards which are supported by LiteX. Configuration of the board and driver is done using json-files. The supported boards are the Colorlight boards 5A-75B and 5A-75E, as these are fully supported with the open source toolchain.
+
+Colorlight 5A-75B and 5A-75E cards are designed as a LED receiver card - it outputs to LED matrix panels. These cards have outputs only - hardware modification is required to enable use for inputs. Soldering required. Output buffers can be replaced with an input buffer.
+
+https://litex-cnc.readthedocs.io
+
+
 ### LinuxCNC-RIO
 RealtimeIO for LinuxCNC based on an FPGA
 
