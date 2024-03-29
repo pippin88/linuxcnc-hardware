@@ -101,9 +101,9 @@ RealtimeIO for LinuxCNC based on an FPGA
 https://github.com/multigcs/LinuxCNC-RIO
 
 ## USB
+USB devices cannot be used to control motors or perform other __"real time"__ tasks.
 
-LinuxCNC_ArduinoConnector
-
+### LinuxCNC_ArduinoConnector
 This Project enables you to connect an Arduino to LinuxCNC and provides as many IO's as you could ever wish for. This Software is used as IO Expansion for LinuxCNC.
 It is NOT intended for timing and security relevant IO's. Don't use it for Emergency Stops or Endstop switches!
 
